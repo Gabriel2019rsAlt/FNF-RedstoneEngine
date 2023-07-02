@@ -7,7 +7,6 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxCamera;
-import flixel.addons.display.FlxBackdrop;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
 import flixel.graphics.frames.FlxAtlasFrames;
@@ -109,13 +108,6 @@ class MainMenuState extends MusicBeatState
 		leGradientBar.y = FlxG.height - leGradientBar.height;
 		add(leGradientBar);
 		leGradientBar.scrollFactor.set(0, 0);
-
-		var bgScroll:FlxBackdrop = new FlxBackdrop(Paths.image('cubicbg'), 5, 5, true, true);
-		bgScroll.scrollFactor.set();
-		bgScroll.screenCenter();
-		bgScroll.velocity.set(50, 50);
-		bgScroll.antialiasing = ClientPrefs.globalAntialiasing;
-		add(bgScroll);
 
 		var bgs:FlxSprite = new FlxSprite(500, -150).loadGraphic(Paths.image('bar'));
 		bgs.scrollFactor.set();
